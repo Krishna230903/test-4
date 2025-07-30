@@ -1,0 +1,102 @@
+/* --- Import Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* --- General App Styling --- */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.stApp {
+    background-image: url("https://images.unsplash.com/photo-1504994236319-3c1935682851?auto=format&fit=crop&q=80&w=2070");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Add a dark overlay for better text readability */
+.stApp::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.75);
+    z-index: -2;
+}
+
+/* Making sure the main content area is transparent */
+.main .block-container {
+    background-color: transparent !important;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+/* --- Sidebar Styling --- */
+section[data-testid="stSidebar"] {
+    background-color: rgba(14, 17, 23, 0.85);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.st-emotion-cache-16txtl3 h1, .st-emotion-cache-16txtl3 .st-emotion-cache-1g8m2i9 {
+     color: #00A9FF;
+     text-shadow: 0 0 10px #00A9FF;
+}
+
+/* --- Polished Card Effect --- */
+.custom-card {
+    background: rgba(25, 30, 40, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    color: #FAFAFA;
+}
+.custom-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px 0 rgba(0, 169, 255, 0.6);
+    border: 1px solid rgba(0, 169, 255, 0.6);
+}
+.custom-card h3 { color: #FAFAFA !important; }
+
+/* --- KPI Metric Styling --- */
+.stMetric {
+    background: rgba(25, 30, 40, 0.8);
+    backdrop-filter: blur(10px);
+    border-left: 5px solid #00A9FF;
+    padding: 20px;
+    border-radius: 10px;
+    color: #FAFAFA !important;
+}
+
+/* --- Button Styling --- */
+.stButton>button {
+    border-radius: 8px;
+    border: 1px solid #00A9FF;
+    color: #00A9FF;
+    background-color: transparent;
+    padding: 12px 24px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.stButton>button:hover {
+    background-color: #00A9FF;
+    color: #FFFFFF;
+    box-shadow: 0 0 15px #00A9FF;
+}
+
+/* General text and headers */
+h1, h2, h3, h4, h5, h6, p, label {
+    color: #FAFAFA;
+}
+h1, h2 {
+    border-bottom: 2px solid #00A9FF;
+    padding-bottom: 10px;
+    display: inline-block;
+}
